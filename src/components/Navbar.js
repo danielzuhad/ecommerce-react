@@ -34,13 +34,18 @@ export const Navbar = () => {
           <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-gray-600 hover:text-blue-600">
-                <Link as={Link} to="/">
+                <Link onClick={() => setNavbar(!navbar)} as={Link} to="/">
                   Home
                 </Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-                <Link as={Link} to="Login">
+                <Link onClick={() => setNavbar(!navbar)} as={Link} to="Login">
                   Login
+                </Link>
+              </li>
+              <li className="text-gray-600 hover:text-blue-600">
+                <Link onClick={() => setNavbar(!navbar)} as={Link} to="Test">
+                  TestPage
                 </Link>
               </li>
             </ul>
