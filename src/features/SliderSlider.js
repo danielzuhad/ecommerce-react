@@ -18,7 +18,11 @@ export const SliderSlicer = createSlice({
     prevSlide: (state, action) => {
       state.value = action.payload < 0 ? state.length - 1 : action.payload;
     },
-    dotSlide() {},
+    dotSlide: (state, action) => {
+      const slider = action.payload;
+      console.log("dot", slider);
+      state.value = slider;
+    },
   },
 });
 
