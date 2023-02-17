@@ -43,11 +43,10 @@ export const Navbar = () => {
                   Login
                 </Link>
               </li>
-              <li className="text-gray-600 hover:text-blue-600">
-                <Link onClick={() => setNavbar(!navbar)} as={Link} to="Test">
-                  TestPage
-                </Link>
-              </li>
+              <form>
+                <input className="border-black border-[1px] p-1 rounded-md mr-3" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn py-2 px-4 bg-blue-300 rounded-md">Search</button>
+              </form>
             </ul>
           </div>
         </div>
